@@ -1,3 +1,12 @@
+// SINGLY LINKED LIST
+
+/** Big O Complexity
+ * Insertion - O(1)
+ * Removal - It depends... O(1) (at the beginning) or O(n) (middle or end)
+ * Searching - O(n)
+ * Access - O(n)
+ */
+
 class Node {
 	constructor(value) {
 		this.value = value;
@@ -111,5 +120,37 @@ class SinglyLinkedList {
 		this.length++;
 
 		return true;
+	}
+
+	// Removes node from linked list at specified index
+	remove(index) {
+		if (index < 0 || index >= this.length) return undefined;
+		if (index === 0) return this.shift();
+		if (index == this.length - 1) return this.pop();
+
+		let previousNode = this.get(index - 1);
+		let removed = previousNode.next;
+		previousNode.next = removed.next;
+		this.length--;
+
+		return removed;
+	}
+
+	// Reverses the order of the linked list
+	reverse() {
+		let node = this.head;
+		this.head = this.tail;
+		this.tail = node;
+		let next;
+		let prev = null;
+
+		for (let i = 0; i < this.length; i++) {
+			next = node.next;
+			node.next = prev;
+			prev = node;
+			node = next;
+		}
+
+		return this;
 	}
 }
