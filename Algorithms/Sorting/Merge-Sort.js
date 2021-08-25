@@ -1,7 +1,7 @@
 // MERGE SORT
 
 /** Big O Complexity
- * Time - O(n log n) (Always)
+ * Time - O(n log n) (All cases)
  * Space - O(n)
  */
 
