@@ -2,7 +2,7 @@
 
 /** Big O Complexity
  * Time - O(n log n) (All cases)
- * Space - O(n)
+ * Space - O(n) (All cases)
  */
 
 function merge(arr1, arr2) {
