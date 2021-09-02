@@ -6,6 +6,7 @@
  * Space - O(log n) (All cases)
  */
 
+// Creates pivot point to help implement the sort
 function pivot(arr, start = 0, end = arr.length - 1) {
 	function swap(array, i, j) {
 		let temp = array[i];
