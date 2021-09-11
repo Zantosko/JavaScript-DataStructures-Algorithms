@@ -3,7 +3,6 @@
 /** Big O Complexity
  * n - length of array
  * k - number of digits (average)
- *
  * Time - O(nk) (All cases)
  * Space - O(n + k) (All cases)
  */
